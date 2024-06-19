@@ -36,6 +36,8 @@ gem "jbuilder"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
+gem "font-awesome-sass", "~> 6.5.1"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -73,3 +75,5 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem "devise", "~> 4.9"
