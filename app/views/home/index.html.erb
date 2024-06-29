@@ -1,5 +1,54 @@
-<h1>Home</h1>
-<p>Welcome to the user home page!</p>
+<%# <h1> User Home</h1> %>
 
-<%= icon('fa-brands', 'font-awesome')%>
-<%= icon('fa-solid', 'user-secret')%>
+<div class="bg-gray-800 text-white text-center py-20">
+  <h1 class="text-5xl font-bold mb-4">Welcome to our Ecommerce site</h1>
+  <p class="text-xl mb-8">Your one-stop shop for all your ecommerce needs!</p>
+  <%= link_to  "Shop Now", root_path, class: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md" %>
+</div>
+
+<div class="flex flex-wrap justify-center items-center gap-10 mt-8">
+  <% @main_categories.each do |category| %>
+    <%= link_to category_path(category) do %>
+      <div class="flex flex-col mb-4 border border-red-400 ">
+        <h2 class="text-gray-800 font-medium text-lg text-center mb-6">
+          <%= category.name %>
+        </h2>
+        <%= category.image.present? ? image_tag(category.image, class: "w-20 h-20 max-w-md") : image_tag("http://via.placeholder.com/50") %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+<div class="bg-gray-100 py-20 my-10 ">
+    <div class="container mx-auto px-6 flex flex-col gap-4 ">
+
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-8"> Customer Testimonials</h2>
+
+    <div class="flex w-full flex-wrap gap-4">
+
+      <div class=" md:w-1/10 px-2 mb-8 ">
+        <div class="bg-gray-100 rounded-md  p-4 md:w-1/10 shadow  px-2 mb-8 "> 
+          <p class="text-gray-800 text-base mb-4 ">
+          "I've been shopping on this Ecommerce site  for years and it's akways been a fantastic experience!"
+          </p>
+          <span class="text-gray-500 text-xs">-Jane Doe</span>
+        </div>
+      </div>
+        <div class="bg-gray-100 rounded-md md:w-1/10 shadow p-4 px-2 mb-8 "> 
+          <p class="text-gray-800 text-base mb-4 w-full ">
+          "I've been shopping on this Ecommerce site  for years and it's akways been a fantastic experience!"
+          </p>
+          <span class="text-gray-500 text-xs">-Jane Doe</span>
+        </div>
+
+      <div class="bg-gray-100 rounded-md md:w-1/10 shadow p-4 px-2 mb-8 "> 
+          <p class="text-gray-800 text-base mb-4 w-full ">
+          "I've been shopping on this Ecommerce site  for years and it's akways been a fantastic experience!"
+          </p>
+          <span class="text-gray-500 text-xs">-Jane Doe</span>
+      </div>
+
+    </div>
+  </div>
+</div>
