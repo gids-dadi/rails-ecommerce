@@ -15,7 +15,7 @@
     <p class="text-md py-8">
       <%= @product.description %>
     </p>
-s
+
     <div class="my-8">
       <p class="uppercase text-lg">size </p>
       <% @product.stocks.each do |stock | %>
@@ -27,11 +27,8 @@ s
          <button disabled value="<%=stock.size%>" class= "bg-gray-200 disabled:bg-gray-400 disabled:opacity-50 text-gray-800 font-semibold py-2 px-4 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 ">
             <%= stock.size %>
           </button>
-
-
-      
       <% end %>  
       <% end %>
-    </div>
+    </div>s
   </div>
 </div>
