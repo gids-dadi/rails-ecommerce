@@ -12,7 +12,6 @@
   </head>
 
   <body>
-
   <%# Remember to put the nav in a partial %>
 <nav class="fixed w-full top-0 bg-gray-100 z-10 py-4">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -31,39 +30,42 @@
     <main class="container mx-auto mt-28 max-w-7xl px-2 sm:px-6 lg:px-8">
       <%= yield %>
     </main>
+
     <footer class="bg-gray-800 text-white">
       <div class="max-w-6xl max-auto px-4 py-10 md:py-20">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <%# About Section %>
           <div class="space-y-8 xl:col-span-1">
-            <h3 class="text-sm font-semibold text-gray-200 tracking tracking-wider  uppercase">About Ecomm</h3> 
+            <h3 class="text-sm font-semibold text-gray-200 tracking-wider  uppercase">About Ecomm</h3> 
 
             <p class="text-white leading-6">
-              Ecomm is a leading online marketplace, offering a wode range of products to cater to all your needs. Our commitment of quality and customer satisfaction makes us the best. shop with us today to have a ensure a great shopping experience. </p>
+              Ecomm is a leading online marketplace, offering a wode range of products to cater to all your needs. Our commitment of quality and customer satisfaction makes us the best. shop with us today to have a ensure a great shopping experience. 
+            </p>
         </div>
+
         <%# Quick Links %>
-        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
+      <div class=" mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          <div class="flex flex-col">
               <h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase"> Quick links</h3>
               <ul class="mt-4 space-y-4"> 
                 <li><%= link_to 'Home', root_path, class: "text-gray-300 hover:text-white  text-base leading-6 " %></li>
               </ul>
             </div>
           </div>
-        </div> 
-        <%#  Contact Information %>
-         <div class=" mt-8 md:grid md:grid-cols-2 md:gap-8">
-          <div>
+      
 
-            <h3 class="text-sm font-semibold text-gray-200">Contact</h3>
+        <%#  Contact Information %>
+      <div class="md:grid md:grid-cols-2 md:gap-8">
+         <div class="flex flex-col p-4  ">
+            <h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">Contact Info</h3>
             <ul class="mt-4 space-y-4">
               <li>
                 <p class="text-gray-300 text-base leading-6">
                   1234, Main Street, <br>
                   City, Country, 12345                  
                   </p>
-              </li> 
+              </li>  
               <li>
                 <p class="text-gray-300 text-base leading-6">
                 Email: support@ecom.com               
@@ -71,26 +73,23 @@
               </li> 
               <li>
                 <p class="text-gray-300 text-base leading-6">
-                  Phone: +1234567890                
+                  Phone: +1234567890
                   </p>
               </li> 
             </ul>
+          </div> 
+        </div> 
+      </div>
+
+          <div class="border-t w-full  border-gray-700">
+          <div class="max-w-6xl mx-auto px-4 py-6 md:flex md:items-center md:justify-between">
+            <p class="mt-6 w-full text-base leading-6 text-gray-400 md:mt-0 md:order-1">
+                &copy; <%= Time.now.year %> Ecomm. All rights reserved.
+            </p>
           </div>
         </div>
 
-        <div class="border-t  border-gray-700">
-          <div class="max-w-6xl mx-auto px-4 py-6 md:flex md:items-center md:justify-between">
-            <p class="mt-6 text-base leading-6 text-gray-400 md:mt-0 md:order-1">
-                &copy; <%= Time.now.year %> Ecomm. All rights reserved.
-            </p>
-
-        </div>
-        </div>
-
-
-
       </div>
-    </div>
     </footer>
   </body>
 </html>
